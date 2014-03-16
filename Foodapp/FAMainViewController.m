@@ -53,6 +53,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     }] resume];
 }
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;
 {
     
@@ -70,19 +75,26 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     
     // load the image for this cell
     
-    NSDictionary *food = self.foodData[indexPath.row];
+    NSMutableDictionary *food = self.foodData[indexPath.row];
     
-    if (!food[@"thumbnail_image"]) {
+    if (!food[@"thumbnail_data"]) {
         NSURLSession *session = [NSURLSession sharedSession];
         
-        [session dataTaskWithURL:[NSURL URLWithString:food[@"thumbnail_url"]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        [[session dataTaskWithURL:[NSURL URLWithString:food[@"thumbnail_url"]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                food[@"thumbnail_data"] = [UIImage imageWithData:data];
+                [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+            });
             
-        }
+        }] resume];
         
+    } else {
+        cell.image.image = food[@"thumbnail_data"];
     }
-         
+        
 //    NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
-//    cell.image.image = [UIImage imageNamed:imageToLoad];
+//
     
     
     
