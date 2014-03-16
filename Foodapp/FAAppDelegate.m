@@ -8,11 +8,63 @@
 
 #import "FAAppDelegate.h"
 
+#import "FAMainViewController.h"
+#import "FASearchViewController.h"
+
+@interface FAAppDelegate() <UITabBarControllerDelegate>
+
+@end
+
 @implementation FAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    
+//    // Override point for customization after application launch.
+//    UIViewController *viewController1, *viewController2, *viewController3, *viewController4, *viewController5;
+//    
+//    viewController1 = [[FAMainViewController alloc] init];
+//    viewController1.title = @"First tab";
+//    
+//    viewController2 = [[FASearchViewController alloc] init];
+//    viewController2.title = @"Second tab";
+//    
+//    viewController3 = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    viewController3.title = @"Third tab";
+//    
+//    viewController4 = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    viewController4.title = @"Fourth tab";
+//    
+//    viewController5 = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    viewController5.title = @"Fifth tab";
+//    
+//    
+//    
+//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//    
+//    
+//    tabBarController.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:viewController1],
+//                                         [[UINavigationController alloc] initWithRootViewController:viewController2],
+//                                         [[UINavigationController alloc] initWithRootViewController:viewController3],
+//                                         [[UINavigationController alloc] initWithRootViewController:viewController4],
+//                                         [[UINavigationController alloc] initWithRootViewController:viewController5]];
+//    
+//	tabBarController.delegate = self;
+//    
+//    //	if ([tabBarController.tabBar respondsToSelector:@selector(setTranslucent:)]) {
+//    // tab bar looks ugly without view controller behind when it is translucent
+//    //		tabBarController.tabBar.translucent = NO;
+//    //	}
+//    self.window.rootViewController = tabBarController;
+//    
+//    [self.window makeKeyAndVisible];
+//    
+//    
+//    return YES;
+//    // Override point for customization after application launch.
     return YES;
 }
 							
