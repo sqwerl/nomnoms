@@ -82,16 +82,16 @@
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&e];
             
             NSLog(@"%@", json);
-            
-            if ([json[@"response_code"] isEqualToString:@"failure"]) {
-                dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if ([json[@"response_code"] isEqualToString:@"failure"]) {
                     [[[UIAlertView alloc] initWithTitle:@"Error" message:json[@"error_msgs"][0] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-                });
-            } else if ([json[@"response_code"] isEqualToString:@"success"]) {
-                FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
-                [mainViewController loadData];
-                [self.navigationController popToViewController:mainViewController animated:NO];
-            }
+                } else if ([json[@"response_code"] isEqualToString:@"success"]) {
+                    FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
+                    [mainViewController loadData];
+                    [self.navigationController popToViewController:mainViewController animated:NO];
+                }
+            });
+
         }] resume];
     }
 }
