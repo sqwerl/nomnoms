@@ -9,6 +9,7 @@
 #import "FAFoodProfileViewController.h"
 
 @interface FAFoodProfileViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -22,6 +23,44 @@
     }
     return self;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.imageView.image = self.image;
+//    self.view addSubview:
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    [UIView animateWithDuration:0.25 animations:^{
+        
+
+        self.navigationController.navigationBar.translucent = YES;
+
+    }];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@""
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:nil];
+    
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
+
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        
+        self.navigationController.navigationBar.translucent = NO;
+        
+    }];
+
+}
+
 
 - (void)viewDidLoad
 {

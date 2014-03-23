@@ -24,6 +24,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navigationItem.title = @"FoodApp";
     [self.tabBarController.tabBar setHidden:NO];
 }
 
@@ -107,7 +108,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 {
     if ([[segue identifier] isEqualToString:@"showDetail"])
     {
-        NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+//        NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+        
+        FAFoodProfileViewController *foodProfileViewController = [segue destinationViewController];
+        
+        foodProfileViewController.image = [[(FAFoodCell *)sender image] image];
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
 //        NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];
@@ -117,6 +122,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         
 //        DetailViewController *detailViewController = [segue destinationViewController];
 //        detailViewController.image = image;
+        
     }
 }
 

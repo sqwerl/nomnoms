@@ -10,4 +10,7 @@
 
 @interface FAFoodProfileViewController : UIViewController
 
+
+@property (nonatomic, strong) UIImage *image;
+
 @end
