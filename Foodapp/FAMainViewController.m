@@ -24,7 +24,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationItem.title = @"FoodApp";
+    self.navigationItem.title = @"FoodApp"; // move to storyboard
     [self.tabBarController.tabBar setHidden:NO];
 }
 

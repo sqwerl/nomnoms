@@ -32,6 +32,8 @@
 		4696676518C28A80008C8AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4696676318C28A80008C8AAC /* InfoPlist.strings */; };
 		4696676718C28A80008C8AAC /* FoodappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696676618C28A80008C8AAC /* FoodappTests.m */; };
 		4696677218C29C89008C8AAC /* FALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696677118C29C89008C8AAC /* FALoginViewController.m */; };
+		46C0942A190318B200C85509 /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C09429190318B200C85509 /* home_icon.png */; };
+		46C0942E19031A6C00C85509 /* home_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C0942D19031A6C00C85509 /* home_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		4696676618C28A80008C8AAC /* FoodappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodappTests.m; sourceTree = "<group>"; };
 		4696677018C29C89008C8AAC /* FALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FALoginViewController.h; sourceTree = "<group>"; };
 		4696677118C29C89008C8AAC /* FALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FALoginViewController.m; sourceTree = "<group>"; };
+		46C09429190318B200C85509 /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
+		46C0942D19031A6C00C85509 /* home_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 		4696673F18C28A80008C8AAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46C094281903189700C85509 /* Icons */,
 				4696674018C28A80008C8AAC /* Foodapp-Info.plist */,
 				4696674118C28A80008C8AAC /* InfoPlist.strings */,
 				4696674418C28A80008C8AAC /* main.m */,
@@ -205,6 +210,15 @@
 				4696676318C28A80008C8AAC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46C094281903189700C85509 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				46C09429190318B200C85509 /* home_icon.png */,
+				46C0942D19031A6C00C85509 /* home_icon@2x.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,9 +298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C0942A190318B200C85509 /* home_icon.png in Resources */,
 				4696675418C28A80008C8AAC /* Images.xcassets in Resources */,
 				4696674318C28A80008C8AAC /* InfoPlist.strings in Resources */,
 				4696674C18C28A80008C8AAC /* Main.storyboard in Resources */,
+				46C0942E19031A6C00C85509 /* home_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
