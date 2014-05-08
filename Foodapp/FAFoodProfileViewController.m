@@ -6,14 +6,57 @@
 //  Copyright (c) 2014 Foodapp Inc. All rights reserved.
 //
 
+
+#define SAVE_PICTURE_URL @"hello"
+
 #import "FAFoodProfileViewController.h"
 
 @interface FAFoodProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *triedButton;
+
+
 @end
 
 @implementation FAFoodProfileViewController
+- (IBAction)saveFood:(id)sender {
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURL *foodURL = [NSURL URLWithString:SAVE_PICTURE_URL];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:foodURL];
+    
+    
+    [request setHTTPMethod:@"Post"];
+    
+    
+    
+//    request setHTTPBody:<#(NSData *)#>
+    
+    
+    [session dataTaskWithURL:foodURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        
+        [self.saveButton setSelected:!self.saveButton.selected];
+        
+        if ([self.saveButton.titleLabel.text isEqualToString:@"save"
+            ]) {
+            self.saveButton.titleLabel.text = @"saved";
+        } else {
+            self.saveButton.titleLabel.text = @"save";
+        }
+        
+    }];
+    
+    
+}
+- (IBAction)triedFood:(id)sender {
+    
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

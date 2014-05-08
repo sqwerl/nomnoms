@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FAFoodProfileViewController : UIViewController
+@interface FoodDescriptionView : UIView
+
+
+
+@end
+
+@interface RestaurantDescriptionView : UIView
+
+
+
+
+@end
+
+
+@interface FAFoodProfileViewController :UIViewController
 
 
 @property (nonatomic, strong) UIImage *image;

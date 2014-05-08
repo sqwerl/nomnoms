@@ -30,7 +30,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImage *buttonImage = [UIImage imageNamed:@"forwardButton.png"];
+    
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [loginButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    
+    
+    
+//    loginButton.frame = CGRectMake(0,0,buttonImage.size.width, buttonImage.size.height);
+    
+    
+    [loginButton addTarget:self action:@selector(loginPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+//    UIBarButtonItem *flipButton = [[UIBarButtonItem alloc];
+//                                   initWithTitle:@"Flip"
+//                                   style:UIBarButtonItemStylePlain
+//                                   target:self
+//                                   action:@selector(loginPressed:)];
+//    self.navigationItem.rightBarButtonItem = flipButton;
+    
+//    self.navigationController.navigationBar.topItem.rightBarButtonItem =
+    
+
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(loginPressed:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"next.png"] style:UIBarButtonItemStylePlain target:self action:@selector(loginPressed:)];
+    
 	// Do any additional setup after loading the view.
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -52,6 +83,9 @@
     } else if (![self.password.text length]) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     } else {
+        
+        // perform login
+        
         NSURLSession *session = [NSURLSession sharedSession];
         
         NSURL *loginURL = [NSURL URLWithString:@"http://foodapp-dev.herokuapp.com/api/v1/log_in"];
@@ -67,6 +101,10 @@
         
         [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
 
+        UIActivityIndicatorView *uiBusy = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        uiBusy.hidesWhenStopped = YES;
+        [uiBusy startAnimating];
+        self.navigationItem.rightBarButtonItem.customView = uiBusy;
         
         [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSError *e;
@@ -76,15 +114,24 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([json[@"response_code"] isEqualToString:@"failure"]) {
+                    
+                    self.navigationItem.rightBarButtonItem.customView = nil;
+                    
                     [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid username/password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                    
+                    
                 } else if ([json[@"response_code"] isEqualToString:@"success"]) {
                     FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
                     [mainViewController loadData];
                     [self.navigationController popToViewController:mainViewController animated:NO];
                 }
             });
+            
 
         }] resume];
+        
+        
+        
     }
 //        UIAlertView *enterPassword
     NSLog(@"login");
