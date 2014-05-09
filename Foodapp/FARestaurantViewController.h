@@ -10,4 +10,12 @@
 
 @interface FARestaurantViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *address;
+
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
+
+@property (nonatomic, strong) NSString *addressString;
+
+@property (nonatomic, strong) NSString *numberString;
+
 @end

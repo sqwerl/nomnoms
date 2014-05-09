@@ -10,6 +10,7 @@
 #define SAVE_PICTURE_URL @"hello"
 
 #import "FAFoodProfileViewController.h"
+#import "FARestaurantViewController.h"
 
 @implementation FoodDescriptionView
 
@@ -148,10 +149,15 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showRestaurant"])
-
+    if ([[segue identifier] isEqualToString:@"showRestaurant"]) {
+        FARestaurantViewController *restaurantViewController = [segue destinationViewController];
     
-    
+        restaurantViewController.title = self.data[@"name"];
+        
+        restaurantViewController.addressString = self.data[@"address"];
+        
+        restaurantViewController.numberString = self.data[@"number"];
+    }
 }
 
 /*

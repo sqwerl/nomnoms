@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.address.text = [NSString stringWithFormat:@"Address: %@", self.addressString];
+    
+    self.phoneNumber.text = [NSString stringWithFormat:@"Phone number: %@", self.numberString];
+    
     // Do any additional setup after loading the view.
 }
 
