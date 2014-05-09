@@ -125,7 +125,7 @@
 {
     [super viewDidLoad];
     
-    self.foodDescriptionView.dishname.text = self.data[@"foodname"];
+    self.foodDescriptionView.dishname.text = self.name;
     
     self.foodDescriptionView.details.text = self.data[@"kind"];
     
@@ -145,6 +145,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showRestaurant"])
+
+    
+    
 }
 
 /*

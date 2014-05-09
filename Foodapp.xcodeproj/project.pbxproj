@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46061BDB191D4BFB00E573F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46061BDA191D4BFB00E573F7 /* FacebookSDK.framework */; };
 		4630CD1118D28F190047B81C /* FAMainFeedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4630CD1018D28F190047B81C /* FAMainFeedCollectionView.m */; };
 		4648B1B018D526C600174232 /* FAFoodProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4648B1AF18D526C600174232 /* FAFoodProfileViewController.m */; };
 		4648B1B318D56A0700174232 /* FoodApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4648B1B218D56A0700174232 /* FoodApp.m */; };
@@ -165,7 +166,6 @@
 		469F527F191C321000388A2A /* taco001.png in Resources */ = {isa = PBXBuildFile; fileRef = 469F51FB191C321000388A2A /* taco001.png */; };
 		469F5280191C321000388A2A /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 469F51FC191C321000388A2A /* top bar.png */; };
 		469F5283191C3EE900388A2A /* FARestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F5282191C3EE900388A2A /* FARestaurantViewController.m */; };
-		469F5285191C5A7E00388A2A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469F5284191C5A7E00388A2A /* FacebookSDK.framework */; };
 		46E889D8191AFA5900A3F2DC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E889B2191AFA5900A3F2DC /* back.png */; };
 		46E889D9191AFA5900A3F2DC /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E889B3191AFA5900A3F2DC /* back@2x.png */; };
 		46E889DA191AFA5900A3F2DC /* Go to.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E889B4191AFA5900A3F2DC /* Go to.png */; };
@@ -212,6 +212,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46061BDA191D4BFB00E573F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		4630CD0F18D28F190047B81C /* FAMainFeedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAMainFeedCollectionView.h; sourceTree = "<group>"; };
 		4630CD1018D28F190047B81C /* FAMainFeedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAMainFeedCollectionView.m; sourceTree = "<group>"; };
 		4648B1AE18D526C600174232 /* FAFoodProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAFoodProfileViewController.h; sourceTree = "<group>"; };
@@ -387,7 +388,6 @@
 		469F51FC191C321000388A2A /* top bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar.png"; sourceTree = "<group>"; };
 		469F5281191C3EE900388A2A /* FARestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FARestaurantViewController.h; sourceTree = "<group>"; };
 		469F5282191C3EE900388A2A /* FARestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FARestaurantViewController.m; sourceTree = "<group>"; };
-		469F5284191C5A7E00388A2A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../ios-howtos/FacebookSDK.framework"; sourceTree = "<group>"; };
 		46E889B2191AFA5900A3F2DC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		46E889B3191AFA5900A3F2DC /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		46E889B4191AFA5900A3F2DC /* Go to.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Go to.png"; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469F5285191C5A7E00388A2A /* FacebookSDK.framework in Frameworks */,
+				46061BDB191D4BFB00E573F7 /* FacebookSDK.framework in Frameworks */,
 				4696673B18C28A80008C8AAC /* CoreGraphics.framework in Frameworks */,
 				4696673D18C28A80008C8AAC /* UIKit.framework in Frameworks */,
 				4696673918C28A80008C8AAC /* Foundation.framework in Frameworks */,
@@ -472,7 +472,7 @@
 		4696673718C28A80008C8AAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				469F5284191C5A7E00388A2A /* FacebookSDK.framework */,
+				46061BDA191D4BFB00E573F7 /* FacebookSDK.framework */,
 				4696673818C28A80008C8AAC /* Foundation.framework */,
 				4696673A18C28A80008C8AAC /* CoreGraphics.framework */,
 				4696673C18C28A80008C8AAC /* UIKit.framework */,
@@ -1437,6 +1437,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Larry/Workspace/ios-howtos",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foodapp/Foodapp-Prefix.pch";
@@ -1457,6 +1458,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Larry/Workspace/ios-howtos",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foodapp/Foodapp-Prefix.pch";

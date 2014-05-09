@@ -151,8 +151,10 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         
         foodProfileViewController.image = [[(FAFoodCell *)sender image] image];
         
+        NSDictionary *food = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row];
+        foodProfileViewController.data = food[@"restaurant"];
         
-        foodProfileViewController.data = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row][@"restaurant"];
+        foodProfileViewController.name = food[@"name"];
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
 //        NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];

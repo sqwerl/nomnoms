@@ -36,4 +36,6 @@
 
 @property (nonatomic, strong) NSDictionary *data;
 
+@property (nonatomic, strong) NSString *name;
+
 @end

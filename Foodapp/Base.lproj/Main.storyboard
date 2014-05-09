@@ -181,7 +181,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBJ-PZ-Rud" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Xv1-lC-dFi">
                     <connections>
-                        <segue destination="S7C-tN-i3b" kind="push" id="wwP-tq-KdX"/>
+                        <segue destination="S7C-tN-i3b" kind="push" identifier="showRestaurant" id="wwP-tq-KdX"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
