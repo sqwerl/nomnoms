@@ -11,6 +11,8 @@
 #import "FAMainViewController.h"
 #import "FASearchViewController.h"
 
+#import <FacebookSDK/FacebookSDK.h>
+
 @interface FAAppDelegate() <UITabBarControllerDelegate>
 
 @end
@@ -19,6 +21,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    [FBLoginView class];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor redColor]];
+    
+    [[UISegmentedControl appearance] setTintColor:[UIColor redColor]];
+
+
     return YES;
 }
 							

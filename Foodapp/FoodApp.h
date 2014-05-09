@@ -16,9 +16,9 @@
 //+ (void)updateUserConfigWithAuthToken:(NSString *)authToken;
 + (void)clearUserConfig;
 
-//+ (NSString *)userLogin;
-//+ (NSString *)userID;
-//+ (NSString *)authToken;
++ (NSString *)userLogin;
++ (NSString *)userID;
++ (NSString *)authToken;
 
 
 

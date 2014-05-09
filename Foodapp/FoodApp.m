@@ -64,6 +64,16 @@ static NSString *AUTH_TOKEN;
         [defaults removeObjectForKey:@"auth_token"];
     }
 }
++ (NSString *)userLogin {
+    return USER_LOGIN;
+}
+
++ (NSString *)authToken {
+    return AUTH_TOKEN;
+}
++ (NSString *)userID {
+    return USER_ID;
+}
 
 
 @end

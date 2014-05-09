@@ -11,16 +11,32 @@
 
 #import "FAFoodProfileViewController.h"
 
+@implementation FoodDescriptionView
+
+@end
+
+@implementation RestaurantDescriptionView
+
+@end
+
 @interface FAFoodProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIButton *triedButton;
 
+@property (weak, nonatomic) IBOutlet FoodDescriptionView *foodDescriptionView;
+@property (weak, nonatomic) IBOutlet RestaurantDescriptionView *restaurantDescriptionView;
 
 @end
 
 @implementation FAFoodProfileViewController
+
+
+- (void)showRestaurant {
+    
+}
+
 - (IBAction)saveFood:(id)sender {
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -34,7 +50,7 @@
     
     
     
-//    request setHTTPBody:<#(NSData *)#>
+//    request setHTTPBody:
     
     
     [session dataTaskWithURL:foodURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -108,6 +124,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.foodDescriptionView.dishname.text = self.data[@"foodname"];
+    
+    self.foodDescriptionView.details.text = self.data[@"kind"];
+    
+    self.foodDescriptionView.description.text = @"manilla clams, chashu, shoyu marinated egg, spring onion, and frilly mustard greens";
+    
+    self.restaurantDescriptionView.restaurantName.text = self.data[@"name"];
+    
+    self.restaurantDescriptionView.restaurantDetails.text = self.data[@"address"];
+    
+    
+//    self.navigationItem.rightBarButtonItem
+    
     // Do any additional setup after loading the view.
 }
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface FAStartViewController : UIViewController
+@interface FAStartViewController : UIViewController <FBLoginViewDelegate>
 
 @end

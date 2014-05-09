@@ -11,13 +11,20 @@
 @interface FoodDescriptionView : UIView
 
 
+@property (nonatomic, weak) IBOutlet UILabel *dishname;
+
+@property (nonatomic, weak) IBOutlet UILabel *details;
+
+@property (nonatomic, weak) IBOutlet UILabel *description;
+
 
 @end
 
 @interface RestaurantDescriptionView : UIView
 
+@property (nonatomic, weak) IBOutlet UILabel *restaurantName;
 
-
+@property (nonatomic, weak) IBOutlet UILabel *restaurantDetails;
 
 @end
 
@@ -26,5 +33,7 @@
 
 
 @property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, strong) NSDictionary *data;
 
 @end

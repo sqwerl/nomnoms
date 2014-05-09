@@ -8,6 +8,7 @@
 
 #import "FALoginViewController.h"
 #import "FAMainViewController.h"
+#import "FoodApp.h"
 
 @interface FALoginViewController () <UITextFieldDelegate>
 
@@ -77,6 +78,8 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
+    
+    
 //    if (self.username.text )
     if (![self.username.text length]) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your username" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
@@ -123,6 +126,7 @@
                 } else if ([json[@"response_code"] isEqualToString:@"success"]) {
                     FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
                     [mainViewController loadData];
+                    [FoodApp loadUserConfigWithLogin:self.username.text userID:json[@"id"] authToken:json[@"token"]];
                     [self.navigationController popToViewController:mainViewController animated:NO];
                 }
             });

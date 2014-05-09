@@ -30,21 +30,30 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 
 - (void)viewDidLoad {
     
-    if (![FoodApp hasUserConfig]) {
+//    if (![FoodApp hasUserConfig]) {
         [self performSegueWithIdentifier:@"showStartScreen" sender:self];
         [self.tabBarController.tabBar setHidden:YES];
-    } else {
-        [self loadData];
-    }
+//    } else {
+//        [self loadData];
+//    }
 }
 
 - (void)loadData {
+    
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"http://foodapp-dev.herokuapp.com/api/v1/user/1/foods"];
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://foodapp-dev.herokuapp.com/api/v1/user/%@/foods", [FoodApp userID]];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request addValue:[NSString stringWithFormat:@"Token token=%@", [FoodApp authToken]] forHTTPHeaderField:@"Authorization"];
+    
     
     NSLog(@"hello");
     
-    [[session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSError *e;
             self.foodData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
@@ -79,13 +88,32 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     NSMutableDictionary *food = self.foodData[indexPath.row];
     
     if (!food[@"thumbnail_data"]) {
+        UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        
+        [activityIndicator startAnimating];
+
+
+        
+        [cell addSubview:activityIndicator];
+        
+        activityIndicator.frame = CGRectOffset(activityIndicator.frame, cell.bounds.size.width/2 - activityIndicator.bounds.size.width/2, cell.bounds.size.height/2 - activityIndicator.bounds.size.width/2);
+        
         NSURLSession *session = [NSURLSession sharedSession];
         
         [[session dataTaskWithURL:[NSURL URLWithString:food[@"thumbnail_url"]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
             dispatch_async(dispatch_get_main_queue(), ^{
-                food[@"thumbnail_data"] = [UIImage imageWithData:data];
-                [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                
+                UIImage *image = [UIImage imageWithData:data];
+                
+                if (image) {
+                    food[@"thumbnail_data"] = image;
+                    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                }
+                
+
+                [activityIndicator stopAnimating];
+
             });
             
         }] resume];
@@ -93,6 +121,10 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     } else {
         cell.image.image = food[@"thumbnail_data"];
     }
+    
+    
+    
+    
         
 //    NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
 //
@@ -100,6 +132,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
 }
 
 // the user tapped a collection item, load and set the image on the detail view controller
@@ -113,6 +150,9 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         FAFoodProfileViewController *foodProfileViewController = [segue destinationViewController];
         
         foodProfileViewController.image = [[(FAFoodCell *)sender image] image];
+        
+        
+        foodProfileViewController.data = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row][@"restaurant"];
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
 //        NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];

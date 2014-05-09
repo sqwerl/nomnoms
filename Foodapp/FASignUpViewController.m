@@ -8,6 +8,7 @@
 
 #import "FASignUpViewController.h"
 #import "FAMainViewController.h"
+#import "FoodApp.h"
 
 @interface FASignUpViewController () <UITextFieldDelegate>
 
@@ -86,6 +87,7 @@
                 if ([json[@"response_code"] isEqualToString:@"failure"]) {
                     [[[UIAlertView alloc] initWithTitle:@"Error" message:json[@"error_msgs"][0] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
                 } else if ([json[@"response_code"] isEqualToString:@"success"]) {
+                    [FoodApp loadUserConfigWithLogin:self.username.text userID:json[@"id"] authToken:json[@"token"]];
                     FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
                     [mainViewController loadData];
                     [self.navigationController popToViewController:mainViewController animated:NO];
