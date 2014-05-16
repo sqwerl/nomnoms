@@ -30,10 +30,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="c1h-3G-wpP">
+                                            <rect key="frame" x="66" y="67" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="c1h-3G-wpP" firstAttribute="top" secondItem="Yfb-VH-XOb" secondAttribute="top" constant="67" id="Nhx-XG-c84"/>
+                                    <constraint firstItem="c1h-3G-wpP" firstAttribute="leading" secondItem="Yfb-VH-XOb" secondAttribute="leading" constant="66" id="WUS-G3-bRJ"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="c1h-3G-wpP" id="5fX-7c-kT1"/>
                                     <outlet property="image" destination="fU4-jJ-pO3" id="B4T-XF-igM"/>
                                     <segue destination="t7z-Fp-Pmu" kind="push" identifier="showDetail" id="eSx-Cw-rnS"/>
                                 </connections>

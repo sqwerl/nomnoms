@@ -90,16 +90,14 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     
     
     if (!food[@"thumbnail_data"]) {
-        cell.image.image = nil;
         
-        UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        if (cell.image.image) {
+            cell.image.image = nil;
+        }
         
-        [activityIndicator startAnimating];
-        
-        [cell addSubview:activityIndicator];
-        
-        activityIndicator.frame = CGRectOffset(activityIndicator.frame, cell.bounds.size.width/2 - activityIndicator.bounds.size.width/2, cell.bounds.size.height/2 - activityIndicator.bounds.size.width/2);
-        
+        if (![cell.activityIndicator isAnimating]) {
+            [cell.activityIndicator startAnimating];
+        }
         NSURLSession *session = [NSURLSession sharedSession];
         
         [[session dataTaskWithURL:[NSURL URLWithString:food[@"thumbnail_url"]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -111,17 +109,13 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
                     food[@"thumbnail_data"] = image;
                     [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
                 }
-                [activityIndicator stopAnimating];
-
             });
             
         }] resume];
         
     } else {
-        for (UIView *view in cell.subviews) {
-            if ([view isKindOfClass:[UIActivityIndicatorView class]]) {
-                [view removeFromSuperview];
-            }
+        if ([cell.activityIndicator isAnimating]) {
+            [cell.activityIndicator stopAnimating];
         }
         cell.image.image = food[@"thumbnail_data"];
     }
