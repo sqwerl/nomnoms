@@ -17,6 +17,7 @@
 		4666387D18CC02F90032157D /* FASignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4666387C18CC02F90032157D /* FASignUpViewController.m */; };
 		4666388018CC086A0032157D /* FAFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4666387F18CC086A0032157D /* FAFoodCell.m */; };
 		4666388318CC090A0032157D /* FAWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4666388218CC090A0032157D /* FAWelcomeViewController.m */; };
+		4680C0691925EC4A0060BAB5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4680C0681925EC4A0060BAB5 /* QuartzCore.framework */; };
 		4696673918C28A80008C8AAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696673818C28A80008C8AAC /* Foundation.framework */; };
 		4696673B18C28A80008C8AAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696673A18C28A80008C8AAC /* CoreGraphics.framework */; };
 		4696673D18C28A80008C8AAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696673C18C28A80008C8AAC /* UIKit.framework */; };
@@ -231,6 +232,7 @@
 		4666387F18CC086A0032157D /* FAFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAFoodCell.m; sourceTree = "<group>"; };
 		4666388118CC090A0032157D /* FAWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAWelcomeViewController.h; sourceTree = "<group>"; };
 		4666388218CC090A0032157D /* FAWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAWelcomeViewController.m; sourceTree = "<group>"; };
+		4680C0681925EC4A0060BAB5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4696673518C28A80008C8AAC /* Foodapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4696673818C28A80008C8AAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4696673A18C28A80008C8AAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -430,6 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4680C0691925EC4A0060BAB5 /* QuartzCore.framework in Frameworks */,
 				46061BDB191D4BFB00E573F7 /* FacebookSDK.framework in Frameworks */,
 				4696673B18C28A80008C8AAC /* CoreGraphics.framework in Frameworks */,
 				4696673D18C28A80008C8AAC /* UIKit.framework in Frameworks */,
@@ -472,6 +475,7 @@
 		4696673718C28A80008C8AAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4680C0681925EC4A0060BAB5 /* QuartzCore.framework */,
 				46061BDA191D4BFB00E573F7 /* FacebookSDK.framework */,
 				4696673818C28A80008C8AAC /* Foundation.framework */,
 				4696673A18C28A80008C8AAC /* CoreGraphics.framework */,

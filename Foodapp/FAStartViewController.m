@@ -11,6 +11,10 @@
 @interface FAStartViewController () 
 @property (weak, nonatomic) IBOutlet UIView *transparentView;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
+
 @end
 
 @implementation FAStartViewController
@@ -30,6 +34,18 @@
 {
     [super viewDidLoad];
     
+    self.loginButton.backgroundColor = [UIColor redColor];
+    
+    self.loginButton.titleLabel.textColor = [UIColor whiteColor];
+    
+    self.loginButton.layer.cornerRadius = 15;
+    
+    
+    self.signupButton.backgroundColor = [UIColor whiteColor];
+    self.signupButton.titleLabel.textColor = [UIColor redColor];
+    
+    self.signupButton.layer.cornerRadius = 15;
+    
     self.transparentView.backgroundColor = [UIColor colorWithWhite:1 alpha:.5];
     
 //    [FBProfilePictureView class];
@@ -41,7 +57,8 @@
 //    loginView.delegate = self;
 //
 //    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width)), 5);
-//    
+    
+//
 //    loginView.center = self.view.center;
 //    
 //    //loginView.loginBehavior = FBSessionLoginBehaviorUseSystemAccountIfPresent;

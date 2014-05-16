@@ -107,12 +107,10 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 UIImage *image = [UIImage imageWithData:data];
-                
                 if (image) {
                     food[@"thumbnail_data"] = image;
                     [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
                 }
-
                 [activityIndicator stopAnimating];
 
             });
@@ -122,18 +120,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     } else {
         for (UIView *view in cell.subviews) {
             if ([view isKindOfClass:[UIActivityIndicatorView class]]) {
-                
-                
                 [view removeFromSuperview];
             }
         }
         cell.image.image = food[@"thumbnail_data"];
     }
-    
-    
-    
-    
-        
 //    NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
 //
     
