@@ -95,10 +95,8 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     [UIView animateWithDuration:0.25 animations:^{
-        
-
+    
         self.navigationController.navigationBar.translucent = YES;
-
     }];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@""
