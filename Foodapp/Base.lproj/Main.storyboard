@@ -650,6 +650,7 @@
                                             <constraint firstItem="zL4-E6-6DX" firstAttribute="centerX" secondItem="Cqp-Jy-zLs" secondAttribute="centerX" id="KCQ-yE-nqO"/>
                                             <constraint firstItem="zL4-E6-6DX" firstAttribute="centerX" secondItem="XAj-zz-u0B" secondAttribute="centerX" id="pgQ-FP-dBX"/>
                                         </constraints>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="activityIndicator" destination="zL4-E6-6DX" id="2jE-om-a5S"/>
                                             <outlet property="image" destination="XAj-zz-u0B" id="364-rB-HAv"/>
