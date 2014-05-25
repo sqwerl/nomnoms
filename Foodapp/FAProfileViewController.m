@@ -9,6 +9,13 @@
 #import "FAProfileViewController.h"
 
 @interface FAProfileViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *coverPhoto;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (weak, nonatomic) IBOutlet UIButton *addFriend;
+@property (weak, nonatomic) IBOutlet UIButton *settings;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *listControl;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *formatControl;
 
 @end
 
@@ -28,7 +35,15 @@
     [super viewDidLoad];
     
     
+    NSURLSession *session = [NSURLSession sharedSession];
     
+    NSString *urlString = @"cover photo url";
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    
+    
+    
+    
+    [session dataTaskWithURL:url];
     
     
     // Do any additional setup after loading the view.

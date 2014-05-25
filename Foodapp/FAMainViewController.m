@@ -14,9 +14,10 @@
 NSString *kDetailedViewControllerID = @"DetailView";    // view controller storyboard id
 NSString *kCellID = @"foodCell";                          // UICollectionViewCell storyboard id]
 
-@interface FAMainViewController()
+@interface FAMainViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray *foodData;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -26,16 +27,29 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     [super viewWillAppear:animated];
     self.navigationItem.title = @"FoodApp"; // move to storyboard
     [self.tabBarController.tabBar setHidden:NO];
+    
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidLoad {
+    //check if user is logged in and has saved userconfiguration. If not then show login screen.
     
-//    if (![FoodApp hasUserConfig]) {
+
+    
+    if (![FoodApp hasUserConfig]) {
         [self performSegueWithIdentifier:@"showStartScreen" sender:self];
         [self.tabBarController.tabBar setHidden:YES];
-//    } else {
-//        [self loadData];
-//    }
+    } else {
+        [self loadData];
+        
+        
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)loadData {

@@ -488,6 +488,9 @@
 		4696673E18C28A80008C8AAC /* Foodapp */ = {
 			isa = PBXGroup;
 			children = (
+				4CBDD096192DB35200605A94 /* Search */,
+				4CBDD095192DB33C00605A94 /* Me */,
+				4CBDD094192DB32C00605A94 /* Home */,
 				4696674718C28A80008C8AAC /* FAAppDelegate.h */,
 				4696674818C28A80008C8AAC /* FAAppDelegate.m */,
 				4666387518CBCBCA0032157D /* FAMainViewController.h */,
@@ -1029,6 +1032,27 @@
 				46E889D7191AFA5900A3F2DC /* Search@2x.png */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		4CBDD094192DB32C00605A94 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		4CBDD095192DB33C00605A94 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		4CBDD096192DB35200605A94 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

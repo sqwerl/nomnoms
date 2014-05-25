@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FAMainViewController : UICollectionViewController
+@interface FAMainViewController : UIViewController
 
 - (void)loadData;
 
