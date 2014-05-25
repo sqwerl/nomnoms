@@ -9,8 +9,8 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="t7z-Fp-Pmu" customClass="FAFoodProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kPi-YW-nST"/>
-                        <viewControllerLayoutGuide type="bottom" id="WYY-RM-BIy"/>
+                        <viewControllerLayoutGuide type="top" id="1bp-gk-GIX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nh7-lT-6rG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Yk-UI-EVs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -51,21 +51,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-9E-hZP">
-                                        <rect key="frame" x="20" y="5" width="194" height="40"/>
+                                        <rect key="frame" x="20" y="5" width="280" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-R7-fTV">
-                                        <rect key="frame" x="20" y="68" width="227" height="38"/>
+                                        <rect key="frame" x="20" y="68" width="280" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUG-si-Rqp">
-                                        <rect key="frame" x="20" y="45" width="227" height="22"/>
+                                        <rect key="frame" x="20" y="45" width="280" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +84,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-aK-cGy">
-                                        <rect key="frame" x="15" y="-4" width="229" height="43"/>
+                                        <rect key="frame" x="15" y="-4" width="285" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.75" green="0.0" blue="0.0081382547530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,8 +143,8 @@
             <objects>
                 <viewController id="S7C-tN-i3b" customClass="FARestaurantViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z2x-oR-azM"/>
-                        <viewControllerLayoutGuide type="bottom" id="p4F-3z-FVp"/>
+                        <viewControllerLayoutGuide type="top" id="Lka-1m-IRS"/>
+                        <viewControllerLayoutGuide type="bottom" id="MgK-6a-1Em"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EOm-y4-mbr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -185,8 +185,8 @@
             <objects>
                 <viewController id="vac-CN-nw9" customClass="FAStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9xa-rJ-Gc3"/>
-                        <viewControllerLayoutGuide type="bottom" id="9yc-lN-3l0"/>
+                        <viewControllerLayoutGuide type="top" id="3GQ-JO-Y3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="fB6-50-EZC"/>
                     </layoutGuides>
                     <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="IEx-Cr-c1x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -249,8 +249,8 @@
             <objects>
                 <viewController id="Th1-F3-Zy5" customClass="FALoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ive-T7-k8Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="SMT-70-u8b"/>
+                        <viewControllerLayoutGuide type="top" id="get-YQ-Djs"/>
+                        <viewControllerLayoutGuide type="bottom" id="kLU-Yn-AKL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0MW-fE-zoq" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -295,15 +295,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQE-uz-Gam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207" y="-2090"/>
+            <point key="canvasLocation" x="2177" y="-2093"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="iI0-HG-6y6">
             <objects>
                 <viewController id="hP0-fJ-COZ" customClass="FASignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1wI-mh-V7J"/>
-                        <viewControllerLayoutGuide type="bottom" id="e4S-Gy-vBf"/>
+                        <viewControllerLayoutGuide type="top" id="v5k-QE-wmP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bzy-rW-Co4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zqD-ye-mUQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -368,15 +368,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzr-Kg-RuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2217" y="-1428"/>
+            <point key="canvasLocation" x="2177" y="-1428"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
                 <viewController title="Second" id="QUy-BD-bpt" customClass="FASecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gqu-vx-hnw"/>
-                        <viewControllerLayoutGuide type="bottom" id="uTx-0t-lTj"/>
+                        <viewControllerLayoutGuide type="top" id="2Oe-z4-LW7"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Dr-xP-FB0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -426,8 +426,8 @@
             <objects>
                 <viewController id="0sj-Jc-Rmm" customClass="FAProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GA0-f7-nqC"/>
-                        <viewControllerLayoutGuide type="bottom" id="eot-xf-2BM"/>
+                        <viewControllerLayoutGuide type="top" id="FeC-yw-g6k"/>
+                        <viewControllerLayoutGuide type="bottom" id="ilx-Oj-HpY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8xV-o7-9Vd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -608,53 +608,47 @@
             <objects>
                 <viewController id="Pqc-nh-zle" customClass="FAMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MZH-zS-eHM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dmt-GM-sxu"/>
+                        <viewControllerLayoutGuide type="top" id="qSy-D9-3t4"/>
+                        <viewControllerLayoutGuide type="bottom" id="DWZ-R0-DCA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uKo-yP-Fbf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="25i-a2-Rpt">
-                                <rect key="frame" x="0.0" y="150" width="320" height="418"/>
+                                <rect key="frame" x="0.0" y="156" width="320" height="412"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5P4-M2-3rM">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="2" id="5P4-M2-3rM">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="7" minY="5" maxX="7" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="foodCell" id="Cqp-Jy-zLs" customClass="FAFoodCell">
-                                        <rect key="frame" x="5" y="5" width="150" height="150"/>
+                                        <rect key="frame" x="7" y="5" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAj-zz-u0B">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAj-zz-u0B">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-E6-6DX">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-E6-6DX">
                                                     <rect key="frame" x="64" y="57" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="zL4-E6-6DX" firstAttribute="centerY" secondItem="XAj-zz-u0B" secondAttribute="centerY" id="HN6-Qw-8og"/>
-                                            <constraint firstItem="zL4-E6-6DX" firstAttribute="centerY" secondItem="Cqp-Jy-zLs" secondAttribute="centerY" id="HOq-dO-MtJ"/>
-                                            <constraint firstItem="zL4-E6-6DX" firstAttribute="centerX" secondItem="Cqp-Jy-zLs" secondAttribute="centerX" id="KCQ-yE-nqO"/>
-                                            <constraint firstItem="zL4-E6-6DX" firstAttribute="centerX" secondItem="XAj-zz-u0B" secondAttribute="centerX" id="pgQ-FP-dBX"/>
-                                        </constraints>
                                         <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="activityIndicator" destination="zL4-E6-6DX" id="2jE-om-a5S"/>
                                             <outlet property="image" destination="XAj-zz-u0B" id="364-rB-HAv"/>
-                                            <segue destination="t7z-Fp-Pmu" kind="push" id="DUv-rY-81Z"/>
+                                            <segue destination="t7z-Fp-Pmu" kind="push" identifier="showDetail" id="DUv-rY-81Z"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -663,12 +657,12 @@
                                     <outlet property="delegate" destination="Pqc-nh-zle" id="plM-Ug-UzO"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-F5-F2C">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fine-dining-slider.png" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-F5-F2C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-25-5WN">
-                                <rect key="frame" x="0.0" y="123" width="320" height="29"/>
+                                <rect key="frame" x="0.0" y="120" width="320" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Near"/>
@@ -676,10 +670,10 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomNom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B6-uQ-eRt">
-                                <rect key="frame" x="105" y="55" width="111" height="41"/>
+                                <rect key="frame" x="73" y="41" width="174" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -689,6 +683,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="appLabel" destination="6B6-uQ-eRt" id="T7d-SL-BYt"/>
                         <outlet property="collectionView" destination="25i-a2-Rpt" id="f0W-YW-6kC"/>
                         <segue destination="vac-CN-nw9" kind="push" identifier="showStartScreen" id="fXy-dn-3mR"/>
                     </connections>
@@ -705,6 +700,7 @@
         <image name="Search.png" width="33" height="33"/>
         <image name="Settings.png" width="50" height="50"/>
         <image name="Share.png" width="24" height="24"/>
+        <image name="fine-dining-slider.png" width="620" height="400"/>
         <image name="geo.png" width="27" height="35"/>
         <image name="grid.png" width="34" height="34"/>
         <image name="landingpage.jpg" width="438" height="707"/>

@@ -18,6 +18,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 
 @property (nonatomic, strong) NSArray *foodData;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *appLabel;
 
 @end
 
@@ -33,17 +34,18 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 }
 
 - (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.appLabel.font = [UIFont fontWithName:@"GiddyupStd" size:40];
+    
+    
     //check if user is logged in and has saved userconfiguration. If not then show login screen.
-    
-
-    
     if (![FoodApp hasUserConfig]) {
         [self performSegueWithIdentifier:@"showStartScreen" sender:self];
         [self.tabBarController.tabBar setHidden:YES];
     } else {
         [self loadData];
-        
-        
     }
 }
 
@@ -132,6 +134,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
             [cell.activityIndicator stopAnimating];
         }
         cell.image.image = food[@"thumbnail_data"];
+        
     }
 //    NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
 //
@@ -146,6 +149,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    return YES;
+}
+
 // the user tapped a collection item, load and set the image on the detail view controller
 //
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -158,10 +166,10 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         
         foodProfileViewController.image = [[(FAFoodCell *)sender image] image];
         
-        NSDictionary *food = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row];
-        foodProfileViewController.data = food[@"restaurant"];
         
-        foodProfileViewController.name = food[@"name"];
+        NSDictionary *food = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row];
+        foodProfileViewController.data = food;
+    
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
 //        NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];

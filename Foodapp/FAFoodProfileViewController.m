@@ -127,15 +127,15 @@
 {
     [super viewDidLoad];
     
-    self.foodDescriptionView.dishname.text = self.name;
+    self.foodDescriptionView.dishname.text = self.data[@"name"];
     
-    self.foodDescriptionView.details.text = self.data[@"kind"];
+    self.foodDescriptionView.details.text = self.data[@"restaurant"][@"kind"];
     
-    self.foodDescriptionView.description.text = @"manilla clams, chashu, shoyu marinated egg, spring onion, and frilly mustard greens";
+    self.foodDescriptionView.description.text = self.data[@"description"];
     
     self.restaurantDescriptionView.restaurantName.text = self.data[@"name"];
     
-    self.restaurantDescriptionView.restaurantDetails.text = self.data[@"address"];
+    self.restaurantDescriptionView.restaurantDetails.text = self.data[@"restaurant"][@"address"];
     
     
 //    self.navigationItem.rightBarButtonItem
@@ -153,11 +153,11 @@
     if ([[segue identifier] isEqualToString:@"showRestaurant"]) {
         FARestaurantViewController *restaurantViewController = [segue destinationViewController];
     
-        restaurantViewController.title = self.data[@"name"];
+        restaurantViewController.title = self.data[@"restaurant"][@"name"];
         
-        restaurantViewController.addressString = self.data[@"address"];
+        restaurantViewController.addressString = self.data[@"restaurant"][@"address"];
         
-        restaurantViewController.numberString = self.data[@"number"];
+        restaurantViewController.numberString = self.data[@"restaurant"][@"number"];
     }
 }
 

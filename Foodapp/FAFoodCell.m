@@ -14,6 +14,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+    
+        
+//        self.image.contentMode = UIViewContentModeScaleToFill;
         // Initialization code
     }
     return self;
