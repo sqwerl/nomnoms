@@ -20,17 +20,6 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>FacebookAppID</key>
-	<string>255345421317620
-</string>
-	<key>FacebookDisplayName</key>
-	<string>foodapp</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -41,14 +30,27 @@
 			</array>
 		</dict>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>255345421317620
+</string>
+	<key>FacebookDisplayName</key>
+	<string>foodapp</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GiddyupStd.otf</string>
+	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -63,9 +65,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>GiddyupStd.otf</string>
-	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

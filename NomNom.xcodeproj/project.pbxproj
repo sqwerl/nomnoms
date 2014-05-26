@@ -202,6 +202,9 @@
 		46E88A07191B414300A3F2DC /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E88A06191B414300A3F2DC /* Home@2x.png */; };
 		4C3DCEDE193172FB002C332B /* fine-dining-slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DCEDD193172FB002C332B /* fine-dining-slider.png */; };
 		4C3DCEE019317705002C332B /* GiddyupStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DCEDF19317705002C332B /* GiddyupStd.otf */; };
+		4C3DCEE319331BAD002C332B /* FARestaurantInfoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */; };
+		4C3DCEE619331BC1002C332B /* FARestaurantMenuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */; };
+		4C3DCEE9193407EC002C332B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3DCEE8193407EC002C332B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,14 +238,14 @@
 		4666388118CC090A0032157D /* FAWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAWelcomeViewController.h; sourceTree = "<group>"; };
 		4666388218CC090A0032157D /* FAWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAWelcomeViewController.m; sourceTree = "<group>"; };
 		4680C0681925EC4A0060BAB5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4696673518C28A80008C8AAC /* Foodapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4696673518C28A80008C8AAC /* NomNom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomNom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4696673818C28A80008C8AAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4696673A18C28A80008C8AAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4696673C18C28A80008C8AAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4696674018C28A80008C8AAC /* Foodapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Foodapp-Info.plist"; sourceTree = "<group>"; };
+		4696674018C28A80008C8AAC /* NomNom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NomNom-Info.plist"; sourceTree = "<group>"; };
 		4696674218C28A80008C8AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4696674418C28A80008C8AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4696674618C28A80008C8AAC /* Foodapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodapp-Prefix.pch"; sourceTree = "<group>"; };
+		4696674618C28A80008C8AAC /* NomNom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NomNom-Prefix.pch"; sourceTree = "<group>"; };
 		4696674718C28A80008C8AAC /* FAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAAppDelegate.h; sourceTree = "<group>"; };
 		4696674818C28A80008C8AAC /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAAppDelegate.m; sourceTree = "<group>"; };
 		4696674B18C28A80008C8AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -251,7 +254,7 @@
 		4696675018C28A80008C8AAC /* FASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FASecondViewController.h; sourceTree = "<group>"; };
 		4696675118C28A80008C8AAC /* FASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FASecondViewController.m; sourceTree = "<group>"; };
 		4696675318C28A80008C8AAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4696675918C28A80008C8AAC /* FoodappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4696675918C28A80008C8AAC /* NomNomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomNomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4696675A18C28A80008C8AAC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4696676218C28A80008C8AAC /* FoodappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodappTests-Info.plist"; sourceTree = "<group>"; };
 		4696676418C28A80008C8AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -429,6 +432,11 @@
 		46E88A06191B414300A3F2DC /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
 		4C3DCEDD193172FB002C332B /* fine-dining-slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fine-dining-slider.png"; sourceTree = "<group>"; };
 		4C3DCEDF19317705002C332B /* GiddyupStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GiddyupStd.otf; sourceTree = "<group>"; };
+		4C3DCEE119331BAD002C332B /* FARestaurantInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FARestaurantInfoContentViewController.h; sourceTree = "<group>"; };
+		4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FARestaurantInfoContentViewController.m; sourceTree = "<group>"; };
+		4C3DCEE419331BC1002C332B /* FARestaurantMenuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FARestaurantMenuContentViewController.h; sourceTree = "<group>"; };
+		4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FARestaurantMenuContentViewController.m; sourceTree = "<group>"; };
+		4C3DCEE8193407EC002C332B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +444,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3DCEE9193407EC002C332B /* MapKit.framework in Frameworks */,
 				4680C0691925EC4A0060BAB5 /* QuartzCore.framework in Frameworks */,
 				46061BDB191D4BFB00E573F7 /* FacebookSDK.framework in Frameworks */,
 				4696673B18C28A80008C8AAC /* CoreGraphics.framework in Frameworks */,
@@ -470,8 +479,8 @@
 		4696673618C28A80008C8AAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4696673518C28A80008C8AAC /* Foodapp.app */,
-				4696675918C28A80008C8AAC /* FoodappTests.xctest */,
+				4696673518C28A80008C8AAC /* NomNom.app */,
+				4696675918C28A80008C8AAC /* NomNomTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -479,6 +488,7 @@
 		4696673718C28A80008C8AAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DCEE8193407EC002C332B /* MapKit.framework */,
 				4680C0681925EC4A0060BAB5 /* QuartzCore.framework */,
 				46061BDA191D4BFB00E573F7 /* FacebookSDK.framework */,
 				4696673818C28A80008C8AAC /* Foundation.framework */,
@@ -494,6 +504,7 @@
 			children = (
 				4CBDD096192DB35200605A94 /* Search */,
 				4CBDD095192DB33C00605A94 /* Me */,
+				4C3DCEE71933F602002C332B /* Restaurant */,
 				4CBDD094192DB32C00605A94 /* Home */,
 				4696674718C28A80008C8AAC /* FAAppDelegate.h */,
 				4696674818C28A80008C8AAC /* FAAppDelegate.m */,
@@ -504,6 +515,10 @@
 				4696674A18C28A80008C8AAC /* Main.storyboard */,
 				469F5281191C3EE900388A2A /* FARestaurantViewController.h */,
 				469F5282191C3EE900388A2A /* FARestaurantViewController.m */,
+				4C3DCEE119331BAD002C332B /* FARestaurantInfoContentViewController.h */,
+				4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */,
+				4C3DCEE419331BC1002C332B /* FARestaurantMenuContentViewController.h */,
+				4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */,
 				46E88A03191B3CF700A3F2DC /* FAProfileViewController.h */,
 				46E88A04191B3CF700A3F2DC /* FAProfileViewController.m */,
 				4630CD0F18D28F190047B81C /* FAMainFeedCollectionView.h */,
@@ -541,10 +556,10 @@
 				4C3DCEDD193172FB002C332B /* fine-dining-slider.png */,
 				469F515B191C321000388A2A /* Assets */,
 				46E889B0191AFA5900A3F2DC /* Icons */,
-				4696674018C28A80008C8AAC /* Foodapp-Info.plist */,
+				4696674018C28A80008C8AAC /* NomNom-Info.plist */,
 				4696674118C28A80008C8AAC /* InfoPlist.strings */,
 				4696674418C28A80008C8AAC /* main.m */,
-				4696674618C28A80008C8AAC /* Foodapp-Prefix.pch */,
+				4696674618C28A80008C8AAC /* NomNom-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1040,6 +1055,13 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		4C3DCEE71933F602002C332B /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Restaurant;
+			sourceTree = "<group>";
+		};
 		4CBDD094192DB32C00605A94 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1064,9 +1086,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4696673418C28A80008C8AAC /* Foodapp */ = {
+		4696673418C28A80008C8AAC /* NomNom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4696676A18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "Foodapp" */;
+			buildConfigurationList = 4696676A18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "NomNom" */;
 			buildPhases = (
 				4696673118C28A80008C8AAC /* Sources */,
 				4696673218C28A80008C8AAC /* Frameworks */,
@@ -1076,14 +1098,14 @@
 			);
 			dependencies = (
 			);
-			name = Foodapp;
+			name = NomNom;
 			productName = Foodapp;
-			productReference = 4696673518C28A80008C8AAC /* Foodapp.app */;
+			productReference = 4696673518C28A80008C8AAC /* NomNom.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4696675818C28A80008C8AAC /* FoodappTests */ = {
+		4696675818C28A80008C8AAC /* NomNomTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4696676D18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "FoodappTests" */;
+			buildConfigurationList = 4696676D18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "NomNomTests" */;
 			buildPhases = (
 				4696675518C28A80008C8AAC /* Sources */,
 				4696675618C28A80008C8AAC /* Frameworks */,
@@ -1094,9 +1116,9 @@
 			dependencies = (
 				4696675F18C28A80008C8AAC /* PBXTargetDependency */,
 			);
-			name = FoodappTests;
+			name = NomNomTests;
 			productName = FoodappTests;
-			productReference = 4696675918C28A80008C8AAC /* FoodappTests.xctest */;
+			productReference = 4696675918C28A80008C8AAC /* NomNomTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1117,7 +1139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4696673018C28A80008C8AAC /* Build configuration list for PBXProject "Foodapp" */;
+			buildConfigurationList = 4696673018C28A80008C8AAC /* Build configuration list for PBXProject "NomNom" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1130,8 +1152,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4696673418C28A80008C8AAC /* Foodapp */,
-				4696675818C28A80008C8AAC /* FoodappTests */,
+				4696673418C28A80008C8AAC /* NomNom */,
+				4696675818C28A80008C8AAC /* NomNomTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1327,6 +1349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3DCEE319331BAD002C332B /* FARestaurantInfoContentViewController.m in Sources */,
 				4696677218C29C89008C8AAC /* FALoginViewController.m in Sources */,
 				4630CD1118D28F190047B81C /* FAMainFeedCollectionView.m in Sources */,
 				4648B1B618D57AD900174232 /* FAStartViewController.m in Sources */,
@@ -1338,6 +1361,7 @@
 				4696675218C28A80008C8AAC /* FASecondViewController.m in Sources */,
 				4696674918C28A80008C8AAC /* FAAppDelegate.m in Sources */,
 				4666387718CBCBCA0032157D /* FAMainViewController.m in Sources */,
+				4C3DCEE619331BC1002C332B /* FARestaurantMenuContentViewController.m in Sources */,
 				4666388318CC090A0032157D /* FAWelcomeViewController.m in Sources */,
 				46E88A05191B3CF700A3F2DC /* FAProfileViewController.m in Sources */,
 				4666388018CC086A0032157D /* FAFoodCell.m in Sources */,
@@ -1360,7 +1384,7 @@
 /* Begin PBXTargetDependency section */
 		4696675F18C28A80008C8AAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4696673418C28A80008C8AAC /* Foodapp */;
+			target = 4696673418C28A80008C8AAC /* NomNom */;
 			targetProxy = 4696675E18C28A80008C8AAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1476,9 +1500,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Foodapp/Foodapp-Prefix.pch";
-				INFOPLIST_FILE = "Foodapp/Foodapp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Foodapp/NomNom-Prefix.pch";
+				INFOPLIST_FILE = "Foodapp/NomNom-Info.plist";
+				PRODUCT_NAME = NomNom;
 				PROVISIONING_PROFILE = "34ABF663-CC49-4A1F-B179-8CE32270F26C";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1497,9 +1521,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Foodapp/Foodapp-Prefix.pch";
-				INFOPLIST_FILE = "Foodapp/Foodapp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Foodapp/NomNom-Prefix.pch";
+				INFOPLIST_FILE = "Foodapp/NomNom-Info.plist";
+				PRODUCT_NAME = NomNom;
 				PROVISIONING_PROFILE = "34ABF663-CC49-4A1F-B179-8CE32270F26C";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1521,7 +1545,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "FoodappTests/FoodappTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NomNomTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1539,7 +1563,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foodapp/Foodapp-Prefix.pch";
 				INFOPLIST_FILE = "FoodappTests/FoodappTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NomNomTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1548,7 +1572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4696673018C28A80008C8AAC /* Build configuration list for PBXProject "Foodapp" */ = {
+		4696673018C28A80008C8AAC /* Build configuration list for PBXProject "NomNom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4696676818C28A80008C8AAC /* Debug */,
@@ -1557,7 +1581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4696676A18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "Foodapp" */ = {
+		4696676A18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "NomNom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4696676B18C28A80008C8AAC /* Debug */,
@@ -1566,7 +1590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4696676D18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "FoodappTests" */ = {
+		4696676D18C28A80008C8AAC /* Build configuration list for PBXNativeTarget "NomNomTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4696676E18C28A80008C8AAC /* Debug */,

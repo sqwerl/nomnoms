@@ -8,6 +8,11 @@
 
 #import "FARestaurantViewController.h"
 
+
+#import "FARestaurantInfoContentViewController.h"
+
+#import "FARestaurantMenuContentViewController.h"
+
 @interface FARestaurantViewController ()
 
 @end
@@ -31,7 +36,38 @@
     
     self.phoneNumber.text = [NSString stringWithFormat:@"Phone number: %@", self.numberString];
     
+    self.dataSource = self;
+    
+    NSArray *viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"restaurantMenuContentViewController"]];
+    
+    [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    // change color of back button
+    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    // change color back to blue
+    self.navigationController.navigationBar.tintColor = [UIColor blueColor];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,5 +86,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+#pragma mark - UIPageViewControllerDataSource
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    if ([viewController isKindOfClass:[FARestaurantMenuContentViewController class]]) {
+        return [self.storyboard instantiateViewControllerWithIdentifier:@"restaurantInfoContentViewController"];
+    }
+    return nil;
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    if ([viewController isKindOfClass:[FARestaurantInfoContentViewController class]]) {
+        return [self.storyboard instantiateViewControllerWithIdentifier:@"restaurantMenuContentViewController"];
+    }
+    
+    return nil;
+}
 
 @end

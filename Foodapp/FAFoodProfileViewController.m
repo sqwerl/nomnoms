@@ -133,7 +133,7 @@
     
     self.foodDescriptionView.description.text = self.data[@"description"];
     
-    self.restaurantDescriptionView.restaurantName.text = self.data[@"name"];
+    self.restaurantDescriptionView.restaurantName.text = self.data[@"restaurant"][@"name"];
     
     self.restaurantDescriptionView.restaurantDetails.text = self.data[@"restaurant"][@"address"];
     

@@ -20,6 +20,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *appLabel;
 
+
+@property (nonatomic) BOOL scrollingDown;
+
+@property (nonatomic) CGFloat lastContentOffset;
+
 @end
 
 @implementation FAMainViewController
@@ -38,6 +43,9 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     [super viewDidLoad];
     
     self.appLabel.font = [UIFont fontWithName:@"GiddyupStd" size:40];
+    
+    
+    self.collectionView.contentOffset = CGPointMake(0, 0);
     
     
     //check if user is logged in and has saved userconfiguration. If not then show login screen.
@@ -150,7 +158,6 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    
     return YES;
 }
 
@@ -181,6 +188,46 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 //        detailViewController.image = image;
         
     }
+}
+
+
+#pragma mark - ScrollViewDelegate methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.lastContentOffset > scrollView.contentOffset.y + 15) {
+        if (self.scrollingDown) {
+            self.scrollingDown = NO;
+            [self stopFullScreenScrolling];
+        }
+    } else if (self.lastContentOffset + 15 < scrollView.contentOffset.y) {
+        if (!self.scrollingDown) {
+            self.scrollingDown = YES;
+            [self beginFullScreenScrolling];
+        }
+    }
+    
+    self.lastContentOffset = scrollView.contentOffset.y;
+}
+
+- (void)beginFullScreenScrolling {
+    CGRect frame = self.tabBarController.tabBar.frame;
+    CGFloat height = frame.size.height;
+    
+    CGFloat offsetY = height;
+    
+    [UIView animateWithDuration:.5 animations:^{
+        self.tabBarController.tabBar.frame = CGRectOffset(frame, 0, offsetY);
+    }];
+}
+
+- (void)stopFullScreenScrolling {
+    CGRect frame = self.tabBarController.tabBar.frame;
+    CGFloat height = frame.size.height;
+    
+    CGFloat offsetY = -height;
+    [UIView animateWithDuration:.5 animations:^{
+        self.tabBarController.tabBar.frame = CGRectOffset(frame, 0, offsetY);
+    }];
 }
 
 @end
