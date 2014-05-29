@@ -41,7 +41,7 @@
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     
-    
+    self.navigationController.navigationBarHidden = YES;
     
     [session dataTaskWithURL:url];
     

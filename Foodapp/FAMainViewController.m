@@ -60,6 +60,8 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = NO;
+    
+    self.scrollingDown = NO;
 }
 
 - (void)loadData {

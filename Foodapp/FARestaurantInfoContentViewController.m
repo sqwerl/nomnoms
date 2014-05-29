@@ -9,6 +9,7 @@
 #import "FARestaurantInfoContentViewController.h"
 
 @interface FARestaurantInfoContentViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *restaurantCoverPhoto;
 
 @end
 
@@ -26,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"hellO";
+    self.restaurantCoverPhoto.image = [UIImage imageNamed:@"ramen shop interior title.jpg"];
+    
     // Do any additional setup after loading the view.
 }
 

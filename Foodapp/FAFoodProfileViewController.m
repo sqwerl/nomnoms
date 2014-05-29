@@ -108,6 +108,11 @@
                                    action:nil];
     
     self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
+    
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
+    
 
 }
 - (void)viewWillDisappear:(BOOL)animated {
@@ -141,8 +146,13 @@
 //    self.navigationItem.rightBarButtonItem
     
     // Do any additional setup after loading the view.
-}
+    
+    // change color of back button
+    self.navigationController.navigationBar.topItem.title = @"";
 
+    
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -154,6 +164,7 @@
         FARestaurantViewController *restaurantViewController = [segue destinationViewController];
     
         restaurantViewController.title = self.data[@"restaurant"][@"name"];
+
         
         restaurantViewController.addressString = self.data[@"restaurant"][@"address"];
         

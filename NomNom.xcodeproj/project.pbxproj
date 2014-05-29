@@ -25,8 +25,6 @@
 		4696674518C28A80008C8AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696674418C28A80008C8AAC /* main.m */; };
 		4696674918C28A80008C8AAC /* FAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696674818C28A80008C8AAC /* FAAppDelegate.m */; };
 		4696674C18C28A80008C8AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4696674A18C28A80008C8AAC /* Main.storyboard */; };
-		4696674F18C28A80008C8AAC /* FAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696674E18C28A80008C8AAC /* FAFirstViewController.m */; };
-		4696675218C28A80008C8AAC /* FASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4696675118C28A80008C8AAC /* FASecondViewController.m */; };
 		4696675418C28A80008C8AAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4696675318C28A80008C8AAC /* Images.xcassets */; };
 		4696675B18C28A80008C8AAC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696675A18C28A80008C8AAC /* XCTest.framework */; };
 		4696675C18C28A80008C8AAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4696673818C28A80008C8AAC /* Foundation.framework */; };
@@ -205,6 +203,7 @@
 		4C3DCEE319331BAD002C332B /* FARestaurantInfoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */; };
 		4C3DCEE619331BC1002C332B /* FARestaurantMenuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */; };
 		4C3DCEE9193407EC002C332B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3DCEE8193407EC002C332B /* MapKit.framework */; };
+		4C3DCF1519343537002C332B /* FARestaurantInfoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DCF1419343537002C332B /* FARestaurantInfoPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,10 +248,6 @@
 		4696674718C28A80008C8AAC /* FAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAAppDelegate.h; sourceTree = "<group>"; };
 		4696674818C28A80008C8AAC /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAAppDelegate.m; sourceTree = "<group>"; };
 		4696674B18C28A80008C8AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4696674D18C28A80008C8AAC /* FAFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFirstViewController.h; sourceTree = "<group>"; };
-		4696674E18C28A80008C8AAC /* FAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFirstViewController.m; sourceTree = "<group>"; };
-		4696675018C28A80008C8AAC /* FASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FASecondViewController.h; sourceTree = "<group>"; };
-		4696675118C28A80008C8AAC /* FASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FASecondViewController.m; sourceTree = "<group>"; };
 		4696675318C28A80008C8AAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4696675918C28A80008C8AAC /* NomNomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomNomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4696675A18C28A80008C8AAC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -437,6 +432,8 @@
 		4C3DCEE419331BC1002C332B /* FARestaurantMenuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FARestaurantMenuContentViewController.h; sourceTree = "<group>"; };
 		4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FARestaurantMenuContentViewController.m; sourceTree = "<group>"; };
 		4C3DCEE8193407EC002C332B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C3DCF1319343537002C332B /* FARestaurantInfoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FARestaurantInfoPageViewController.h; sourceTree = "<group>"; };
+		4C3DCF1419343537002C332B /* FARestaurantInfoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FARestaurantInfoPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,10 +499,12 @@
 		4696673E18C28A80008C8AAC /* Foodapp */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DCEEA193409E2002C332B /* Signup */,
 				4CBDD096192DB35200605A94 /* Search */,
 				4CBDD095192DB33C00605A94 /* Me */,
 				4C3DCEE71933F602002C332B /* Restaurant */,
 				4CBDD094192DB32C00605A94 /* Home */,
+				4C3DCF161934354A002C332B /* Food */,
 				4696674718C28A80008C8AAC /* FAAppDelegate.h */,
 				4696674818C28A80008C8AAC /* FAAppDelegate.m */,
 				4666387518CBCBCA0032157D /* FAMainViewController.h */,
@@ -513,12 +512,6 @@
 				4648B1AE18D526C600174232 /* FAFoodProfileViewController.h */,
 				4648B1AF18D526C600174232 /* FAFoodProfileViewController.m */,
 				4696674A18C28A80008C8AAC /* Main.storyboard */,
-				469F5281191C3EE900388A2A /* FARestaurantViewController.h */,
-				469F5282191C3EE900388A2A /* FARestaurantViewController.m */,
-				4C3DCEE119331BAD002C332B /* FARestaurantInfoContentViewController.h */,
-				4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */,
-				4C3DCEE419331BC1002C332B /* FARestaurantMenuContentViewController.h */,
-				4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */,
 				46E88A03191B3CF700A3F2DC /* FAProfileViewController.h */,
 				46E88A04191B3CF700A3F2DC /* FAProfileViewController.m */,
 				4630CD0F18D28F190047B81C /* FAMainFeedCollectionView.h */,
@@ -529,20 +522,10 @@
 				4648B1B218D56A0700174232 /* FoodApp.m */,
 				4666387E18CC086A0032157D /* FAFoodCell.h */,
 				4666387F18CC086A0032157D /* FAFoodCell.m */,
-				4648B1B418D57AD900174232 /* FAStartViewController.h */,
-				4648B1B518D57AD900174232 /* FAStartViewController.m */,
-				4666387B18CC02F90032157D /* FASignUpViewController.h */,
 				46E889F7191AFB9700A3F2DC /* FARestaurant.h */,
 				46E889F8191AFB9700A3F2DC /* FARestaurant.m */,
-				4666387C18CC02F90032157D /* FASignUpViewController.m */,
-				4696677018C29C89008C8AAC /* FALoginViewController.h */,
-				4696677118C29C89008C8AAC /* FALoginViewController.m */,
 				4666387818CBFC160032157D /* FASearchViewController.h */,
 				4666387918CBFC160032157D /* FASearchViewController.m */,
-				4696674D18C28A80008C8AAC /* FAFirstViewController.h */,
-				4696674E18C28A80008C8AAC /* FAFirstViewController.m */,
-				4696675018C28A80008C8AAC /* FASecondViewController.h */,
-				4696675118C28A80008C8AAC /* FASecondViewController.m */,
 				4696675318C28A80008C8AAC /* Images.xcassets */,
 				4696673F18C28A80008C8AAC /* Supporting Files */,
 			);
@@ -1058,8 +1041,36 @@
 		4C3DCEE71933F602002C332B /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				469F5281191C3EE900388A2A /* FARestaurantViewController.h */,
+				469F5282191C3EE900388A2A /* FARestaurantViewController.m */,
+				4C3DCEE119331BAD002C332B /* FARestaurantInfoContentViewController.h */,
+				4C3DCEE219331BAD002C332B /* FARestaurantInfoContentViewController.m */,
+				4C3DCEE419331BC1002C332B /* FARestaurantMenuContentViewController.h */,
+				4C3DCF1319343537002C332B /* FARestaurantInfoPageViewController.h */,
+				4C3DCF1419343537002C332B /* FARestaurantInfoPageViewController.m */,
+				4C3DCEE519331BC1002C332B /* FARestaurantMenuContentViewController.m */,
 			);
 			name = Restaurant;
+			sourceTree = "<group>";
+		};
+		4C3DCEEA193409E2002C332B /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				4648B1B418D57AD900174232 /* FAStartViewController.h */,
+				4648B1B518D57AD900174232 /* FAStartViewController.m */,
+				4666387B18CC02F90032157D /* FASignUpViewController.h */,
+				4666387C18CC02F90032157D /* FASignUpViewController.m */,
+				4696677018C29C89008C8AAC /* FALoginViewController.h */,
+				4696677118C29C89008C8AAC /* FALoginViewController.m */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		4C3DCF161934354A002C332B /* Food */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Food;
 			sourceTree = "<group>";
 		};
 		4CBDD094192DB32C00605A94 /* Home */ = {
@@ -1354,18 +1365,17 @@
 				4630CD1118D28F190047B81C /* FAMainFeedCollectionView.m in Sources */,
 				4648B1B618D57AD900174232 /* FAStartViewController.m in Sources */,
 				4648B1B318D56A0700174232 /* FoodApp.m in Sources */,
+				4C3DCF1519343537002C332B /* FARestaurantInfoPageViewController.m in Sources */,
 				4696674518C28A80008C8AAC /* main.m in Sources */,
 				4666387A18CBFC160032157D /* FASearchViewController.m in Sources */,
 				469F5283191C3EE900388A2A /* FARestaurantViewController.m in Sources */,
 				46E889F9191AFB9700A3F2DC /* FARestaurant.m in Sources */,
-				4696675218C28A80008C8AAC /* FASecondViewController.m in Sources */,
 				4696674918C28A80008C8AAC /* FAAppDelegate.m in Sources */,
 				4666387718CBCBCA0032157D /* FAMainViewController.m in Sources */,
 				4C3DCEE619331BC1002C332B /* FARestaurantMenuContentViewController.m in Sources */,
 				4666388318CC090A0032157D /* FAWelcomeViewController.m in Sources */,
 				46E88A05191B3CF700A3F2DC /* FAProfileViewController.m in Sources */,
 				4666388018CC086A0032157D /* FAFoodCell.m in Sources */,
-				4696674F18C28A80008C8AAC /* FAFirstViewController.m in Sources */,
 				4666387D18CC02F90032157D /* FASignUpViewController.m in Sources */,
 				4648B1B018D526C600174232 /* FAFoodProfileViewController.m in Sources */,
 			);

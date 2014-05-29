@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FARestaurantMenuContentViewController : UIViewController <UIPageViewControllerDataSource>
+@interface FARestaurantMenuContentViewController : UIViewController
 
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
