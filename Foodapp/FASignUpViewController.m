@@ -14,7 +14,7 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *firstname;
 @property (nonatomic, weak) IBOutlet UITextField *lastname;
-@property (nonatomic, weak) IBOutlet UITextField *username;
+@property (nonatomic, weak) IBOutlet UITextField *email;
 @property (nonatomic, weak) IBOutlet UITextField *password;
 
 @end
@@ -57,8 +57,8 @@
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your first name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     } else if (![self.lastname.text length]) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your last name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    } else if (![self.username.text length]) {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your username" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    } else if (![self.email.text length]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     } else if (![self.password.text length]) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter your password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     } else {
@@ -71,7 +71,7 @@
         
         [request setHTTPMethod:@"POST"];
         
-        NSString *lowercaseUsername = [self.username.text lowercaseString];
+        NSString *lowercaseUsername = [self.email.text lowercaseString];
         
         NSString *postString = [NSString stringWithFormat:@"email=%@&password=%@&first_name=%@&last_name=%@", lowercaseUsername, self.password.text,self.firstname.text, self.lastname.text];
         
@@ -87,7 +87,7 @@
                 if ([json[@"response_code"] isEqualToString:@"failure"]) {
                     [[[UIAlertView alloc] initWithTitle:@"Error" message:json[@"error_msgs"][0] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
                 } else if ([json[@"response_code"] isEqualToString:@"success"]) {
-                    [FoodApp loadUserConfigWithLogin:self.username.text userID:json[@"id"] authToken:json[@"token"]];
+                    [FoodApp loadUserConfigWithLogin:self.email.text userID:json[@"id"] authToken:json[@"token"]];
                     FAMainViewController *mainViewController = [[self.navigationController viewControllers] objectAtIndex:0];
                     [mainViewController loadData];
                     [self.navigationController popToViewController:mainViewController animated:NO];
@@ -105,8 +105,8 @@
     if (textField == self.firstname) {
         [self.lastname becomeFirstResponder];
     } else if (textField == self.lastname) {
-        [self.username becomeFirstResponder];
-    } else if (textField == self.username) {
+        [self.email becomeFirstResponder];
+    } else if (textField == self.email) {
         [self.password becomeFirstResponder];
     } else {
         [self signUp:nil];

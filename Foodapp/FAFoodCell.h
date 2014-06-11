@@ -15,5 +15,8 @@
 
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+@property (weak, nonatomic) IBOutlet UILabel *likes;
+
+@property (weak, nonatomic) IBOutlet UIImageView *heart;
 
 @end

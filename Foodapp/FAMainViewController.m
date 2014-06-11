@@ -11,6 +11,8 @@
 #import "FAFoodCell.h"
 #import "FoodApp.h"
 
+#import "DZNSegmentedControl.h"
+
 NSString *kDetailedViewControllerID = @"DetailView";    // view controller storyboard id
 NSString *kCellID = @"foodCell";                          // UICollectionViewCell storyboard id]
 
@@ -20,8 +22,10 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *appLabel;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (nonatomic) BOOL scrollingDown;
+@property (weak, nonatomic) IBOutlet UIImageView *topPicture;
 
 @property (nonatomic) CGFloat lastContentOffset;
 
@@ -36,6 +40,11 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     
     
     self.navigationController.navigationBarHidden = YES;
+    
+}
+
+- (void)selectionChanged {
+    
 }
 
 - (void)viewDidLoad {
@@ -45,7 +54,15 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     self.appLabel.font = [UIFont fontWithName:@"GiddyupStd" size:40];
     
     
-    self.collectionView.contentOffset = CGPointMake(0, 0);
+    DZNSegmentedControl *segmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"Near", @"Top"]];
+    
+    [segmentedControl setFrame:CGRectMake(0, 110, 320, 40)];
+    
+    segmentedControl.showsCount = NO;
+    segmentedControl.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.9];
+    [segmentedControl addTarget:self action:@selector(selectionChanged) forControlEvents:UIControlEventValueChanged];
+    
+    [self.view addSubview:segmentedControl];
     
     
     //check if user is logged in and has saved userconfiguration. If not then show login screen.
@@ -119,6 +136,8 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         
         if (cell.image.image) {
             cell.image.image = nil;
+            cell.likes.text = nil;
+            cell.heart.hidden = YES;
         }
         
         if (![cell.activityIndicator isAnimating]) {
@@ -144,12 +163,13 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
             [cell.activityIndicator stopAnimating];
         }
         cell.image.image = food[@"thumbnail_data"];
+        cell.likes.text = [NSString stringWithFormat:@"%@", food[@"likes"]];
+        cell.heart.hidden = NO;
+        NSLog(@"%@", food[@"likes"]);
         
     }
 //    NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
 //
-    
-    
     
     return cell;
 }
@@ -188,7 +208,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
         
 //        DetailViewController *detailViewController = [segue destinationViewController];
 //        detailViewController.image = image;
-        
+
     }
 }
 

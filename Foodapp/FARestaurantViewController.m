@@ -13,7 +13,7 @@
 
 #import "FARestaurantMenuContentViewController.h"
 
-@interface FARestaurantViewController ()
+@interface FARestaurantViewController () <UIPageViewControllerDataSource>
 
 @end
 

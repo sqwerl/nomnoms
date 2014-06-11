@@ -58,14 +58,14 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    if (viewController isKindOfClass:(__unsafe_unretained Class))
-    
+//    if (viewController isKindOfClass:(__unsafe_unretained Class))
+    return [self.storyboard instantiateViewControllerWithIdentifier:@"retaurantLocationViewController"];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     
-    
+    return [self.storyboard instantiateViewControllerWithIdentifier:@"retaurantLocationViewController"];
 }
 
 @end

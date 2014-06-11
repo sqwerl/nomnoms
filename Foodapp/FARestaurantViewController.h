@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FARestaurantViewController : UIPageViewController <UIPageViewControllerDataSource>
+@interface FARestaurantViewController : UIPageViewController 
 
 @property (weak, nonatomic) IBOutlet UILabel *address;
 
