@@ -180,8 +180,15 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    return YES;
+    if ([identifier isEqualToString:@"showDetail"]) {
+        NSDictionary *food = self.foodData[[self.collectionView indexPathForCell:(UICollectionViewCell *)sender].row];
+        if (food[@"thumbnail_data"]) {
+            return YES;
+        }
+    }
+    return NO;
 }
+
 
 // the user tapped a collection item, load and set the image on the detail view controller
 //

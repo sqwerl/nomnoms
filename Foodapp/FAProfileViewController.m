@@ -11,6 +11,8 @@
 
 #import "FAfoodCell.h"
 
+#import "DZNSegmentedControl.h"
+
 #define SAVED_FOODS_URL @""
 
 @interface FAProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -52,6 +54,26 @@
     
     
     self.navigationController.navigationBarHidden = YES;
+    
+    
+    DZNSegmentedControl *segmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"liked", @"tried"]];
+    
+    
+    segmentedControl.frame = CGRectMake(0, 180, 320, 40);
+    
+    segmentedControl.showsCount = NO;
+    
+    
+    [self.view addSubview:segmentedControl];
+    
+    
+    DZNSegmentedControl *formatControl = [[DZNSegmentedControl alloc] initWithItems:@[@"grid", @"one", @"geo"]];
+    
+    formatControl.showsCount = NO;
+    
+    formatControl.frame = CGRectMake(0, 220, 320, 40);
+    
+    [self.view addSubview:formatControl];
     
     
     [session dataTaskWithURL:url];
