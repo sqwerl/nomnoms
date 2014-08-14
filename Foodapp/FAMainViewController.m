@@ -22,7 +22,7 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *appLabel;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) DZNSegmentedControl *segmentedControl;
 
 @property (nonatomic) BOOL scrollingDown;
 @property (weak, nonatomic) IBOutlet UIImageView *topPicture;
@@ -54,15 +54,15 @@ NSString *kCellID = @"foodCell";                          // UICollectionViewCel
     self.appLabel.font = [UIFont fontWithName:@"GiddyupStd" size:40];
     
     
-    DZNSegmentedControl *segmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"Near", @"Top"]];
+    self.segmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"Near", @"Top"]];
     
-    [segmentedControl setFrame:CGRectMake(0, 110, 320, 40)];
+    [self.segmentedControl setFrame:CGRectMake(0, 110, 320, 40)];
     
-    segmentedControl.showsCount = NO;
-    segmentedControl.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.9];
-    [segmentedControl addTarget:self action:@selector(selectionChanged) forControlEvents:UIControlEventValueChanged];
+    self.segmentedControl.showsCount = NO;
+    self.segmentedControl.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.9];
+    [self.segmentedControl addTarget:self action:@selector(selectionChanged) forControlEvents:UIControlEventValueChanged];
     
-    [self.view addSubview:segmentedControl];
+    [self.view addSubview:self.segmentedControl];
     
     
     //check if user is logged in and has saved userconfiguration. If not then show login screen.

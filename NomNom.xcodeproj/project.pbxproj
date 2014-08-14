@@ -237,6 +237,7 @@
 		4666387E18CC086A0032157D /* FAFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAFoodCell.h; sourceTree = "<group>"; };
 		4666387F18CC086A0032157D /* FAFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAFoodCell.m; sourceTree = "<group>"; };
 		4680C0681925EC4A0060BAB5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4686B2B519675709009FB869 /* FADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FADefines.h; sourceTree = "<group>"; };
 		4696673518C28A80008C8AAC /* NomNom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomNom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4696673818C28A80008C8AAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4696673A18C28A80008C8AAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -506,6 +507,7 @@
 			children = (
 				4C4E59D41945384D00AD25E9 /* DZNSegmentedControl.h */,
 				4C4E59D51945384D00AD25E9 /* DZNSegmentedControl.m */,
+				4686B2B519675709009FB869 /* FADefines.h */,
 				4C3DCEEA193409E2002C332B /* Signup */,
 				4CBDD096192DB35200605A94 /* Search */,
 				4CBDD095192DB33C00605A94 /* Me */,
